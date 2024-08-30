@@ -8,6 +8,10 @@ from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments
 from trl import SFTTrainer
 
+os.environ["HF_HOME"] = "/data/hf_cache"
+os.environ["TRANSFORMERS_CACHE"] = "/data/hf_cache"
+os.environ["HF_DATASETS_CACHE"] = "/data/hf_cache"
+
 # Configuration
 config = {
     "project_name": "distil-logits",
